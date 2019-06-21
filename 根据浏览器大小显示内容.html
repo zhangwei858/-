@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+			//当浏览器窗口大小改变时，设置显示内容的高度
+			window.onresize=function(){
+				 changeDiv();
+
+			}
+			function changeDiv(){				
+				var w = window.innerWidth;//获取页面可见宽度
+				var h = window.innerHeight;//获取页面可见高度
+				if (w<960) 
+				{
+					document.getElementById("deo1").style.display="none";
+					
+				}
+				else
+				{
+					document.getElementById("deo1").style.display="block";
+					document.getElementById("deo1").innerHTML="浏览器window宽度: "+w;
+				}
+				if (h<680) 
+				{
+					document.getElementById("demo").style.display="none";
+					
+				}
+				else
+				{
+					document.getElementById("demo").style.display="block";
+					document.getElementById("demo").innerHTML="浏览器window高度: "+h;
+				}
+				
+			};
+			
+</script>
+<p id="demo"> </p>
+<p id="deo1">213</p>
+<script type="text/javascript">
+	changeDiv();
+</script>
+</body>
+</html>

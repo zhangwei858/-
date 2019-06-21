@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href=".\CSS\mycss.css">
+
+
+</head>
+<body class="beijingimag">
+	<!-- 引用Echarts的图形库 -->
+	<script src="./JS文件/myecharts.js"></script>
+
+	<div class="container-fluid " style="width: auto; height: auto;">
+		<div class="clearfix">
+			<div class="col-xl-12 column col-lg-12">
+				<h3 class="text-center h3" >数据分析展示页面</h3>
+			</div>
+		</div>
+
+		<div class="row clearfix">
+			<div class="col-xl-12 column col-lg-12">
+				<div class="row clearfix">
+
+					<div class="col-xl-3 column col-lg-4">
+
+						<div id="bar_tuxing" class=" kuai1" >
+							<div class="clearfix"><p class="kuai_title">一 周 湿 度 对 比</p></div>
+							<div id="bar" class="kuai1_tu ">
+								<script type="text/javascript">
+									var HH=echarts.init(document.getElementById('bar'));
+									Zhuxingtu(HH);
+								</script>
+							</div>
+							<div class="row clearfix"> </div>
+						</div>
+
+						<div id="pie_tuxing" class="kuai1 ">
+							<div class="clearfix"> <p class="kuai_title ">用 电 分 析</p></div>
+							<div id="pei" class="kuai1_tu "> 
+								<script type="text/javascript">
+									var PP=echarts.init(document.getElementById('pei'));
+									Bingxingtu(PP);
+								</script>
+							</div>
+						</div>
+
+						<div id="area_tuxixng" class="kuai1">
+							<div class="clearfix"> <p class="kuai_title">一周用水量</p></div>
+							<div id="area" class="kuai1_tu"> 
+								<script type="text/javascript">
+									var AA=echarts.init(document.getElementById('area'));
+									Meiguitu(AA);
+								</script>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-6 column col-lg-8">
+
+
+						<div id="Hunhe_tuxing" class="kuai2">
+							<div class="clearfix"> <p class="kuai_title">用水用电量</p></div>
+							<div id="Hunhe" class="kuai1_tu4"> 
+								<script type="text/javascript">
+									var Hh=echarts.init(document.getElementById('Hunhe'));
+									Hunhetu(Hh);
+								</script>
+							</div>
+						</div>
+									
+						<div id="Jizuobiao_tuxing" class="kuai2">
+							<div class="clearfix "> 
+								<div class="clearfix"><p class="kuai_title">污 染 物 含 量</p></div></div>
+
+							<div class="row clearfix">
+							<div id="Jizuobiao" class="kuai1_tu2 col-xl-6 col-lg-6">
+								<script type="text/javascript">
+									var JZB=echarts.init(document.getElementById('Jizuobiao'));
+									Jizuobiaotu1(JZB);
+								</script>
+							</div>
+						
+							<div id="Jizuobiao2" class="kuai1_tu2 col-xl-6 col-lg-6">
+								<script type="text/javascript">
+									var JZB2=echarts.init(document.getElementById('Jizuobiao2'));
+									Jizuobiaotu2(JZB2);
+								</script>
+							</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-3 column col-lg-12">
+						
+						<div id="ZB_tuxing" class="kuai1">
+							<div class="clearfix"> <p class="kuai_title">最低、高温度</p></div>
+							<div id="ZB" class="kuai1_tu"> 
+								<script type="text/javascript">
+									var zb=echarts.init(document.getElementById('ZB'));
+									ZBtu(zb);
+								</script>
+							</div>
+						</div>
+
+						<div id="Shuiping_tuxing" class="kuai1">
+							<div class="clearfix"> <p class="kuai_title">一周用电量</p></div>
+							<div id="Shuiping" class="kuai1_tu"> 
+								<script type="text/javascript">
+									var Shuiping=echarts.init(document.getElementById('Shuiping'));
+									Shuipingtu(Shuiping);
+								</script>
+							</div>
+							</div>
+
+							<div id="Loutu_tuxing" class="kuai1">
+								<div class="clearfix"> <p class="kuai_title">本季度空气质量天数</p></div>
+								<div id="Loutu" class="kuai1_tu"> 
+									<script type="text/javascript">
+										var Loutu=echarts.init(document.getElementById('Loutu'));
+										Loudoutu(Loutu);
+									</script>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+			</div>
+			<script type="text/javascript">
+				window.onresize=function()
+				{
+					Loutu.resize();
+					Shuiping.resize();
+					zb.resize();
+					JZB2.resize();
+					JZB.resize();
+					Hh.resize();
+					AA.resize();
+					PP.resize();
+					HH.resize();
+				}
+			</script>
+		</body>
+		</html>
