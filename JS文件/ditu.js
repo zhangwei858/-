@@ -1285,40 +1285,52 @@ function changeDiv(){
         var w = window.innerWidth;//获取页面可见宽度
         var h = window.innerHeight;//获取页面可见高度
         // 根据当前浏览器宽度显示内容
-        if (w<960) 
+        if (h<700 || w<1000 ) 
         {
+            document.getElementById("SQ").style.display="none";
             document.getElementById("Pie").style.display="none";
             document.getElementById("YBP").style.display="none";
             document.getElementById("bar").style.display="none";
-            document.getElementById("table_div").style.display="none";
-            document.getElementById("SQ").style.display="none";
-            
         }
-        else
+        if (h>700 && w>1000 ) 
         {
             document.getElementById("Pie").style.display="block";
             document.getElementById("YBP").style.display="block";
-            document.getElementById("bar").style.display="block";
-            document.getElementById("table_div").style.display="block";
             document.getElementById("SQ").style.display="block";
+            document.getElementById("bar").style.display="block";
         }
+        // if (h<680) 
+        // {
+        //     document.getElementById("SQ").style.display="none";
+        //     document.getElementById("Pie").style.display="none";
+        //     document.getElementById("YBP").style.display="none";
+        //     document.getElementById("bar").style.display="none";
+            
+        // }
+        // else
+        // {
+        //     document.getElementById("Pie").style.display="block";
+        //     document.getElementById("YBP").style.display="block";
+        //     document.getElementById("SQ").style.display="block";
+        //     document.getElementById("bar").style.display="block"
+        // }
 
-        // 根据当前浏览器高度显示内容
-        if (h<680) 
-        {
-            document.getElementById("SQ").style.display="none";
-            document.getElementById("Pie").style.display="none";
-            document.getElementById("YBP").style.display="none";
-            document.getElementById("bar").style.display="none";
+        // // 根据当前浏览器高度显示内容
+        // if (w<900) 
+        // {
+        //     document.getElementById("SQ").style.display="none";
+        //     document.getElementById("Pie").style.display="none";
+        //     document.getElementById("YBP").style.display="none";
+        //     document.getElementById("bar").style.display="none";
             
-        }
-        else
-        {
-            document.getElementById("Pie").style.display="block";
-            document.getElementById("YBP").style.display="block";
-            document.getElementById("SQ").style.display="block";
-            document.getElementById("bar").style.display="block";
+        // }
+        // else
+        // {
+        //     document.getElementById("Pie").style.display="block";
+        //     document.getElementById("YBP").style.display="block";
+        //     document.getElementById("SQ").style.display="block";
+        //     document.getElementById("bar").style.display="block";
             
-        }
+        // }
     
 };
